@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+import ThemedHolidaysPage from './pages/ThemedHolidaysPage';
+import Corporates from './pages/Corporates';
+import PackagesPage from './pages/PackagesPage'
+
+
+
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Local from './pages/Local';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+       
+        <Route path="/" element={<Navigate to="/Home" />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path='/PackagesPage' element ={<PackagesPage/>}/>
+        <Route path='/ThemedHolidaysPage' element ={<ThemedHolidaysPage/>}/>
+        <Route path='/Corporates' element ={<Corporates/>}/>
+        <Route path='/Local' element ={<Local/>}/>
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+       
+        
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
