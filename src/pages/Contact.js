@@ -1,17 +1,52 @@
-// Contact.js
-import React from 'react';
-
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaWhatsapp} from 'react-icons/fa';
+import { faMapMarkerAlt, faPhoneAlt, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
+  const formRef = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    alert('Message sent successfully!');
+
+    emailjs.sendForm(
+      'service_ei1ywbh',
+      'template_czowim9',
+      formRef.current,
+      '1Yz5aPyLELqyH_jkL'
+    )
+    .then((result) => {
+      console.log(result.text);
+      alert('Message sent successfully!');
+      e.target.reset();
+    }, (error) => {
+      console.log(error.text);
+      alert('Failed to send message. Please try again.');
+    });
+  };
+
+  // WhatsApp click handler with your number
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '254701071435';
+    const message = "Hello Elizabeth! I'm interested in your travel services.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  // Social media handlers (replace with your actual links)
+  const handleSocialClick = (platform) => {
+    const urls = {
+      facebook: 'https://facebook.com/yourpage',
+      instagram: 'https://instagram.com/yourprofile',
+      twitter: 'https://twitter.com/yourhandle',
+      linkedin: 'https://linkedin.com/in/yourprofile'
+    };
+    window.open(urls[platform], '_blank');
   };
 
   return (
     <div className="contact-page">
-      {/* Hero Section */}
       <section className="contact-hero">
         <div className="hero-content">
           <h1>Get in Touch</h1>
@@ -19,63 +54,77 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Content */}
       <div className="contact-container">
-        {/* Contact Info */}
         <div className="contact-info">
           <div className="info-card">
-            <i className="fas fa-map-marker-alt"></i>
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
             <h3>Visit Us</h3>
-            <p>123 Adventure Lane<br />Travel City, TC 12345</p>
+            <p>123 Adventure Lane<br />Nairobi, Kenya</p>
           </div>
-          
+
           <div className="info-card">
-            <i className="fas fa-phone-alt"></i>
+            <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
             <h3>Call Us</h3>
-            <p>+1 (555) 123-4567<br />Mon-Fri: 9am - 5pm EST</p>
+            <p>+254 701 071435<br />Mon-Fri: 9am - 5pm EAT</p>
           </div>
-          
+
           <div className="info-card">
-            <i className="fas fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <h3>Email Us</h3>
-            <p>hello@travelbuddy.com<br />support@travelbuddy.com</p>
+            <p>elizabeth@gmail.com<br />murianzisupport@gmail.com</p>
           </div>
-          
+
+          {/* WhatsApp Button with proper icon */}
+          <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
+            <FaWhatsapp className="icon whatsapp-icon" />
+            <h3>Chat on WhatsApp</h3>
+            <p>Click to message us directly<br />Fast response guaranteed!</p>
+          </div>
+
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <button onClick={() => handleSocialClick('facebook')} className="social-button">
+              <span className="social-icon">Facebook</span>
+            </button>
+            <button onClick={() => handleSocialClick('instagram')} className="social-button">
+              <span className="social-icon">Instagram</span>
+            </button>
+            <button onClick={() => handleSocialClick('twitter')} className="social-button">
+              <span className="social-icon">Twitter</span>
+            </button>
+            <button onClick={() => handleSocialClick('linkedin')} className="social-button">
+              <span className="social-icon">LinkedIn</span>
+            </button>
           </div>
         </div>
 
         {/* Contact Form */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
           <div className="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" name="user_name" placeholder="Your Name" required />
           </div>
-          
+
           <div className="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input type="email" name="user_email" placeholder="Your Email" required />
           </div>
-          
+
           <div className="form-group">
-            <input type="text" placeholder="Subject" required />
+            <input type="text" name="subject" placeholder="Subject" required />
           </div>
-          
+
           <div className="form-group">
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           </div>
-          
-          <button type="submit" className="submit-btn">Send Message</button>
+
+          <button type="submit" className="submit-btn">
+            <FontAwesomeIcon icon={faPaperPlane} /> Send Message
+          </button>
         </form>
       </div>
 
-      {/* Map Section */}
       <div className="map-container">
         <iframe 
           title="office-location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-0.12345678901234567!3d51.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDA3JzI0LjQiTiAwwrAwNyczOC40Ilc!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808521231293!2d36.82121431475399!3d-1.292359835979996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664f5f5e7%3A0x4e0785e8e7a3e4b8!2sNairobi%20City%20Centre%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1629999999999!5m2!1sen!2ske"
           allowFullScreen
           loading="lazy"
         ></iframe>

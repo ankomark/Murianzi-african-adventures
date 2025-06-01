@@ -1,6 +1,7 @@
 // src/pages/ThemedHolidays.js
 import React, { useState, useEffect, useRef } from 'react';
-import { FaSearch, FaStar, FaMapMarkerAlt,  FaCalendarAlt, FaUsers, FaGlassCheers, FaRing, FaBirthdayCake, FaUmbrellaBeach } from 'react-icons/fa';
+import { FaSearch, FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaGlassCheers, FaRing, FaBirthdayCake, FaUmbrellaBeach } from 'react-icons/fa';
+
 
 // Theme categories data
 const themeCategories = [
@@ -75,7 +76,7 @@ const themeCategories = [
         title: "Luxury Safari Adventure",
         location: "Kenya",
         desc: "Experience the wild in style for your milestone celebration.",
-        img: "https://images.pexels.com/photos/45839/antelope-cervidae-africa-safari-45839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img: "https://images.pexels.com/photos/1770310/pexels-photo-1770310.jpeg?auto=compress&cs=tinysrgb&w=600",
         price: 5899,
         duration: 10,
         rating: 4.8,
@@ -105,7 +106,7 @@ const themeCategories = [
         title: "Disney Magical Experience",
         location: "Orlando, Florida",
         desc: "The ultimate family vacation with theme park access and character experiences.",
-        img: "https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img: "https://images.pexels.com/photos/1129615/pexels-photo-1129615.jpeg?auto=compress&cs=tinysrgb&w=600",
         price: 5299,
         duration: 7,
         rating: 4.8,
@@ -186,7 +187,7 @@ const ThemedHolidaysPage = () => {
           dest.location.toLowerCase().includes(term) ||
           dest.desc.toLowerCase().includes(term) ||
           (dest.highlight && dest.highlight.toLowerCase().includes(term))
-        ) {
+        ){
           results.push(dest);
         }
       });
@@ -217,29 +218,29 @@ const ThemedHolidaysPage = () => {
   }, [filteredDestinations]);
 
   return (
-    <div className="themed-holidays-page">
+    <div className="th-page">
       {/* Hero Section */}
-      <section className="themed-hero">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1>Special Occasion Getaways</h1>
-          <p>Tailored experiences for life's most memorable moments</p>
+      <section className="th-hero">
+        <div className="th-hero-overlay"></div>
+        <div className="th-hero-content">
+          <h1 className="th-hero-title">Special Occasion Getaways</h1>
+          <p className="th-hero-subtitle">Tailored experiences for life's most memorable moments</p>
         </div>
       </section>
 
       {/* Theme Navigation */}
-      <section className="theme-navigation">
-        <div className="container">
-          <div className="theme-tabs">
+      <section className="th-nav">
+        <div className="th-container">
+          <div className="th-tabs">
             {themeCategories.map(theme => (
               <div 
                 key={theme.id}
-                className={`theme-tab ${activeTheme === theme.id ? 'active' : ''}`}
+                className={`th-tab ${activeTheme === theme.id ? 'active' : ''}`}
                 onClick={() => setActiveTheme(theme.id)}
               >
-                <div className="theme-icon">{theme.icon}</div>
-                <h3>{theme.title}</h3>
-                <p>{theme.description}</p>
+                <div className="th-tab-icon">{theme.icon}</div>
+                <h3 className="th-tab-title">{theme.title}</h3>
+                <p className="th-tab-desc">{theme.description}</p>
               </div>
             ))}
           </div>
@@ -247,14 +248,15 @@ const ThemedHolidaysPage = () => {
       </section>
 
       {/* Search and Results */}
-      <section className="themed-results">
-        <div className="container">
-          <div className="results-header">
-            <h2>{themeCategories.find(t => t.id === activeTheme)?.title || "All Themes"}</h2>
-            <div className="search-box">
-              <FaSearch className="search-icon" />
+      <section className="th-results">
+        <div className="th-container">
+          <div className="th-results-header">
+            <h2 className="th-results-title">{themeCategories.find(t => t.id === activeTheme)?.title || "All Themes"}</h2>
+            <div className="th-search-box">
+              <FaSearch className="th-search-icon" />
               <input 
                 type="text" 
+                className="th-search-input"
                 placeholder="Search themed holidays..." 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -263,10 +265,10 @@ const ThemedHolidaysPage = () => {
           </div>
 
           {filteredDestinations.length > 0 ? (
-            <div className="destinations-grid">
+            <div className="th-grid">
               {filteredDestinations.map(destination => (
                 <div 
-                  className="destination-card"
+                  className="th-card"
                   key={destination.id}
                   ref={el => cardsRef.current[destination.id] = el}
                   style={{ 
@@ -275,29 +277,29 @@ const ThemedHolidaysPage = () => {
                     transition: `opacity 0.5s ease, transform 0.5s ease`
                   }}
                 >
-                  <div className="card-image">
-                    <img src={destination.img} alt={destination.title} loading="lazy" />
-                    <div className="card-overlay">
-                      <button className="quick-view">View Details</button>
+                  <div className="th-card-image">
+                    <img src={destination.img} alt={destination.title} className="th-card-img" loading="lazy" />
+                    <div className="th-card-overlay">
+                      <button className="th-quick-view">View Details</button>
                     </div>
                   </div>
-                  <div className="card-content">
-                    <h3>{destination.title}</h3>
-                    <div className="location">
+                  <div className="th-card-content">
+                    <h3 className="th-card-title">{destination.title}</h3>
+                    <div className="th-card-location">
                       <FaMapMarkerAlt />
                       <span>{destination.location}</span>
                     </div>
-                    <p className="description">{destination.desc}</p>
-                    <div className="highlight">
-                      <FaStar className="highlight-icon" />
+                    <p className="th-card-desc">{destination.desc}</p>
+                    <div className="th-card-highlight">
+                      <FaStar className="th-highlight-icon" />
                       <span>{destination.highlight}</span>
                     </div>
-                    <div className="card-footer">
-                      <div className="price">From ${destination.price}</div>
-                      <div className="duration">
+                    <div className="th-card-footer">
+                      <div className="th-card-price">From ${destination.price}</div>
+                      <div className="th-card-duration">
                         <FaCalendarAlt /> {destination.duration} Days
                       </div>
-                      <div className="rating">
+                      <div className="th-card-rating">
                         <FaStar /> {destination.rating}
                       </div>
                     </div>
@@ -306,11 +308,11 @@ const ThemedHolidaysPage = () => {
               ))}
             </div>
           ) : (
-            <div className="no-results">
-              <div className="no-results-content">
-                <h3>No themed holidays match your search</h3>
-                <p>Try adjusting your search or browse our other themes</p>
-                <button onClick={() => setSearchTerm('')}>
+            <div className="th-no-results">
+              <div className="th-no-results-content">
+                <h3 className="th-no-results-title">No themed holidays match your search</h3>
+                <p className="th-no-results-text">Try adjusting your search or browse our other themes</p>
+                <button className="th-no-results-btn" onClick={() => setSearchTerm('')}>
                   Clear Search
                 </button>
               </div>
@@ -320,84 +322,84 @@ const ThemedHolidaysPage = () => {
       </section>
 
       {/* Special Offers Banner */}
-      <section className="special-offers-banner">
-        <div className="container">
-          <div className="banner-content">
-            <h2>Customize Your Themed Holiday</h2>
-            <p>Our travel experts will tailor your special occasion package to your exact preferences</p>
-            <div className="banner-features">
-              <div className="feature">
-                <div className="feature-icon">1</div>
-                <h4>Personal Consultation</h4>
-                <p>One-on-one planning session</p>
+      <section className="th-offers-banner">
+        <div className="th-container">
+          <div className="th-banner-content">
+            <h2 className="th-banner-title">Customize Your Themed Holiday</h2>
+            <p className="th-banner-text">Our travel experts will tailor your special occasion package to your exact preferences</p>
+            <div className="th-banner-features">
+              <div className="th-feature">
+                <div className="th-feature-icon">1</div>
+                <h4 className="th-feature-title">Personal Consultation</h4>
+                <p className="th-feature-text">One-on-one planning session</p>
               </div>
-              <div className="feature">
-                <div className="feature-icon">2</div>
-                <h4>Tailored Itinerary</h4>
-                <p>Designed around your preferences</p>
+              <div className="th-feature">
+                <div className="th-feature-icon">2</div>
+                <h4 className="th-feature-title">Tailored Itinerary</h4>
+                <p className="th-feature-text">Designed around your preferences</p>
               </div>
-              <div className="feature">
-                <div className="feature-icon">3</div>
-                <h4>Special Touches</h4>
-                <p>Custom decorations and surprises</p>
+              <div className="th-feature">
+                <div className="th-feature-icon">3</div>
+                <h4 className="th-feature-title">Special Touches</h4>
+                <p className="th-feature-text">Custom decorations and surprises</p>
               </div>
             </div>
-            <button className="cta-button">Request a Custom Quote</button>
+            <button className="th-cta-btn">Request a Custom Quote</button>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="themed-testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2>Celebration Stories</h2>
-            <p>See how we've helped create unforgettable moments</p>
+      <section className="th-testimonials">
+        <div className="th-container">
+          <div className="th-section-header">
+            <h2 className="th-section-title">Celebration Stories</h2>
+            <p className="th-section-subtitle">See how we've helped create unforgettable moments</p>
           </div>
           
-          <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <div className="quote-icon">"</div>
-                <p>"Our honeymoon in Santorini was beyond perfect. The private sunset dinner arranged by Bonfire was the most romantic experience of our lives."</p>
-                <div className="author">
-                  <div className="author-info">
-                    <h4>Sarah & Michael</h4>
-                    <div className="theme">Honeymooners</div>
+          <div className="th-testimonials-grid">
+            <div className="th-testimonial-card">
+              <div className="th-testimonial-content">
+                <div className="th-quote-icon">"</div>
+                <p className="th-testimonial-text">"Our honeymoon in Santorini was beyond perfect. The private sunset dinner arranged by Bonfire was the most romantic experience of our lives."</p>
+                <div className="th-author">
+                  <div className="th-author-info">
+                    <h4 className="th-author-name">Sarah & Michael</h4>
+                    <div className="th-author-theme">Honeymooners</div>
                   </div>
-                  <div className="rating">
+                  <div className="th-author-rating">
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <div className="quote-icon">"</div>
-                <p>"Bonfire made our destination wedding in Bali absolutely stress-free. They handled every detail so we could just enjoy our special day."</p>
-                <div className="author">
-                  <div className="author-info">
-                    <h4>Jessica & David</h4>
-                    <div className="theme">Newlyweds</div>
+            <div className="th-testimonial-card">
+              <div className="th-testimonial-content">
+                <div className="th-quote-icon">"</div>
+                <p className="th-testimonial-text">"Bonfire made our destination wedding in Bali absolutely stress-free. They handled every detail so we could just enjoy our special day."</p>
+                <div className="th-author">
+                  <div className="th-author-info">
+                    <h4 className="th-author-name">Jessica & David</h4>
+                    <div className="th-author-theme">Newlyweds</div>
                   </div>
-                  <div className="rating">
+                  <div className="th-author-rating">
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="testimonial-card">
-              <div className="testimonial-content">
-                <div className="quote-icon">"</div>
-                <p>"For my 50th birthday, my family surprised me with a safari in Kenya. The attention to detail and special touches made it unforgettable."</p>
-                <div className="author">
-                  <div className="author-info">
-                    <h4>Robert Johnson</h4>
-                    <div className="theme">Birthday Celebration</div>
+            <div className="th-testimonial-card">
+              <div className="th-testimonial-content">
+                <div className="th-quote-icon">"</div>
+                <p className="th-testimonial-text">"For my 50th birthday, my family surprised me with a safari in Kenya. The attention to detail and special touches made it unforgettable."</p>
+                <div className="th-author">
+                  <div className="th-author-info">
+                    <h4 className="th-author-name">Robert Johnson</h4>
+                    <div className="th-author-theme">Birthday Celebration</div>
                   </div>
-                  <div className="rating">
+                  <div className="th-author-rating">
                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                   </div>
                 </div>

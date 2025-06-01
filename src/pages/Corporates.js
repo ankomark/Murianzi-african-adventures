@@ -1,8 +1,11 @@
 import React from 'react'
+import PackagesPage from './PackagesPage'
 
 function Corporates() {
   return (
-    <div>Corporates</div>
+    <div>
+      <PackagesPage/>
+    </div>
   )
 }
 

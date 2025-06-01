@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import ThemedHolidaysPage from './pages/ThemedHolidaysPage';
 import Corporates from './pages/Corporates';
 import PackagesPage from './pages/PackagesPage'
+import LocalDestinations from './pages/LocalDestinations';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/PackagesPage' element ={<PackagesPage/>}/>
         <Route path='/ThemedHolidaysPage' element ={<ThemedHolidaysPage/>}/>
         <Route path='/Corporates' element ={<Corporates/>}/>
+        <Route path='/LocalDestinations' element ={<LocalDestinations/>}/>
         <Route path='/Local' element ={<Local/>}/>
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />

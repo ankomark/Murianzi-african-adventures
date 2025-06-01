@@ -2,6 +2,7 @@
 import React from 'react';
 import judith from '../images/judith.jpeg'
 import murianzi from '../images/murianzi.jpeg'
+import { Link } from 'react-router-dom';
 
 
 const About = () => {
@@ -83,8 +84,10 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="about-cta">
-        <h2>Ready to Write Your Story?</h2>
+        <h2 className='abt'>Ready to Write Your Story?</h2>
+        <Link to='/Contact'>
         <button className="cta-button">Start Your Journey</button>
+        </Link>
       </section>
     </div>
   );
