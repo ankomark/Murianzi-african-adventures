@@ -28,7 +28,7 @@ const Contact = () => {
 
   // WhatsApp click handler with your number
   const handleWhatsAppClick = () => {
-    const phoneNumber = '254701071435';
+    const phoneNumber = '254 724 579663';
     const message = "Hello Elizabeth! I'm interested in your travel services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
