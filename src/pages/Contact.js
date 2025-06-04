@@ -59,7 +59,7 @@ const Contact = () => {
           <div className="info-card">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
             <h3>Visit Us</h3>
-            <p>Kasarani<br />Nairobi, Kenya</p>
+            <p>Kasarani<br />Nairobi, Kenya ,Opposite Naivas supermarket</p>
           </div>
 
           <div className="info-card">
@@ -76,7 +76,7 @@ const Contact = () => {
 
           {/* WhatsApp Button with proper icon */}
           <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
-            <FaWhatsapp className="icon whatsapp-icon" />
+            <FaWhatsapp className="whatsapp-icon" />
             <h3>Chat on WhatsApp</h3>
             <button className='sendemail'>Click here to message us directly</button>
            

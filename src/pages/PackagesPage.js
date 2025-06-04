@@ -87,7 +87,7 @@ const destinationCategories = [
         title: "Patagonia Expedition",
         location: "Chile/Argentina",
         desc: "Dramatic landscapes, glaciers, and hiking adventures at the end of the world.",
-        img: "https://images.pexels.com/photos/161401/fitzroy-patagonia-mountain-glacier-161401.jpeg?auto=compress&cs=tinysrgb&w=600",
+        img: "https://images.pexels.com/photos/2516401/pexels-photo-2516401.jpeg?auto=compress&cs=tinysrgb&w=600",
         theme: "Adventure",
         price: 2899,
         duration: 14,
