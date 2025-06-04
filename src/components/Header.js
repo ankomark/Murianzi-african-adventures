@@ -54,10 +54,10 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <NavLink to="/" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)} end>Home</NavLink>
-        <NavLink to="/Destinations" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Destinations</NavLink>
-        <NavLink to="/ThemedHoliday" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Themed Holiday</NavLink>
+        <NavLink to="/PackagesPage" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Destinations</NavLink>
+        <NavLink to="/ThemedHolidaysPage" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Themed Holiday</NavLink>
         <NavLink to="/Corporates" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Corporates</NavLink>
-        <NavLink to="/Local" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Local Destinations</NavLink>
+        <NavLink to="/LocalDestinations" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Local Destinations</NavLink>
         <NavLink to="/about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
         <NavLink to="/contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink>
       </div>

@@ -1140,19 +1140,18 @@
 
 
 
-/* Add to Home.css */
 /* Packages Page Styles */
 .packages-page {
   font-family: 'Montserrat', sans-serif;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .packages-hero {
   position: relative;
-  height: 50vh;
+  height: 40vh;
   background: 
     linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%),
     url('https://images.pexels.com/photos/32301953/pexels-photo-32301953/free-photo-of-luxury-beachfront-villa-with-turquoise-lounge-chairs.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover no-repeat;
@@ -1183,14 +1182,14 @@
 }
 
 .packages-hero h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .packages-hero p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
@@ -1199,32 +1198,32 @@
   display: flex;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 40px 20px;
-  gap: 30px;
+  padding: 30px 15px;
+  gap: 20px;
 }
 
 .filters-sidebar {
-  flex: 0 0 300px;
+  flex: 0 0 280px;
   background: white;
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   height: fit-content;
   position: sticky;
-  top: 100px;
+  top: 90px;
 }
 
 .filters-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 
 .filters-header h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #0c4a6e;
 }
 
@@ -1238,56 +1237,13 @@
 }
 
 .filter-group {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .filter-group h4 {
   font-size: 1.1rem;
   color: #0c4a6e;
-  margin-bottom: 15px;
-}
-
-.price-range {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.price-range input[type="range"] {
-  width: 100%;
-  height: 5px;
-  background: #eee;
-  border-radius: 5px;
-  outline: none;
-}
-
-.price-range input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  background: #f59e0b;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.filter-options {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.filter-options label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.filter-options input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #f59e0b;
+  margin-bottom: 12px;
 }
 
 select {
@@ -1338,46 +1294,48 @@ select {
 
 .packages-grid {
   flex: 1;
+  width: 100%; /* Ensure it takes full width on mobile */
 }
 
 .grid-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   flex-wrap: wrap;
   gap: 15px;
 }
 
 .grid-header h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #0c4a6e;
 }
 
 .controls {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .search-box {
   position: relative;
   display: flex;
   align-items: center;
+  flex-grow: 1; /* Allow search to grow on mobile */
 }
 
 .search-box .search-icon {
   position: absolute;
-  left: 15px;
+  left: 12px;
   color: #0c4a6e;
   font-size: 1.1rem;
 }
 
 .search-box input {
-  padding: 12px 20px 12px 45px;
+  padding: 10px 15px 10px 40px;
   border: 1px solid #ddd;
   border-radius: 50px;
   font-size: 1rem;
-  width: 250px;
+  width: 100%;
   transition: border-color 0.3s ease;
 }
 
@@ -1393,11 +1351,12 @@ select {
   background: #0c4a6e;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 10px 18px;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  white-space: nowrap; /* Prevent button text wrapping */
 }
 
 .filter-toggle:hover {
@@ -1406,8 +1365,8 @@ select {
 
 .destinations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .destination-card {
@@ -1417,11 +1376,83 @@ select {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .destination-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.theme-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f59e0b;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0c4a6e;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
 }
 
 .card-meta {
@@ -1435,42 +1466,42 @@ select {
 .meta-item {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 0.9rem;
   color: #666;
 }
 
 .no-results {
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
   background: #f8f9fa;
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .no-results .globe-icon {
-  font-size: 4rem;
-  color: #0c4a6e;
-  margin-bottom: 20px;
-}
-
-.no-results h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   color: #0c4a6e;
   margin-bottom: 15px;
 }
 
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #0c4a6e;
+  margin-bottom: 12px;
+}
+
 .no-results p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .no-results button {
   background: #f59e0b;
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 10px 25px;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
@@ -1481,7 +1512,7 @@ select {
   background: #e68a00;
 }
 
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 1200px) {
   .packages-container {
     flex-direction: column;
@@ -1493,10 +1524,11 @@ select {
     left: -100%;
     height: 100vh;
     z-index: 1000;
-    width: 320px;
+    width: 85%;
+    max-width: 320px;
     transition: left 0.3s ease;
     overflow-y: auto;
-    padding-top: 60px;
+    padding: 60px 20px 20px;
   }
   
   .filters-sidebar.mobile-visible {
@@ -1516,25 +1548,96 @@ select {
 }
 
 @media (max-width: 768px) {
+  .packages-page {
+    margin-top: 60px;
+  }
+  
+  .packages-hero {
+    height: 35vh;
+  }
+  
   .packages-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .packages-hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .packages-container {
+    padding: 20px 10px;
   }
   
   .grid-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   
-  .search-box input {
+  .controls {
     width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .search-box {
+    width: 100%;
+  }
+  
+  .filter-toggle {
+    align-self: flex-start;
   }
   
   .destinations-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Disable animations on mobile */
+  .destination-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-hero {
+    height: 30vh;
+  }
+  
+  .packages-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .packages-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .theme-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  
+  .card-image {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .no-results h3 {
+    font-size: 1.3rem;
   }
 }
 

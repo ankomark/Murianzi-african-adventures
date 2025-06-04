@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
             <FaWhatsapp className="icon whatsapp-icon" />
             <h3>Chat on WhatsApp</h3>
-            <button className='sendemail'>Click to message us directly</button>
+            <button className='sendemail'>Click here to message us directly</button>
            
           </div>
 
