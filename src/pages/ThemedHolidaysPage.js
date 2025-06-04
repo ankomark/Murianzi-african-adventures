@@ -1,6 +1,6 @@
 // src/pages/ThemedHolidays.js
 import React, { useState, useEffect, useRef } from 'react';
-import { FaSearch, FaStar, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaGlassCheers, FaRing, FaBirthdayCake, FaUmbrellaBeach } from 'react-icons/fa';
+import { FaSearch, FaStar, FaMapMarkerAlt,  FaUsers, FaGlassCheers, FaRing, FaBirthdayCake, FaUmbrellaBeach } from 'react-icons/fa';
 
 
 // Theme categories data
@@ -280,7 +280,7 @@ const ThemedHolidaysPage = () => {
                   <div className="th-card-image">
                     <img src={destination.img} alt={destination.title} className="th-card-img" loading="lazy" />
                     <div className="th-card-overlay">
-                      <button className="th-quick-view">View Details</button>
+                      {/* <button className="th-quick-view">View Details</button> */}
                     </div>
                   </div>
                   <div className="th-card-content">
@@ -295,9 +295,9 @@ const ThemedHolidaysPage = () => {
                       <span>{destination.highlight}</span>
                     </div>
                     <div className="th-card-footer">
-                      <div className="th-card-price">From ${destination.price}</div>
+                      {/* <div className="th-card-price">From ${destination.price}</div> */}
                       <div className="th-card-duration">
-                        <FaCalendarAlt /> {destination.duration} Days
+                        {/* <FaCalendarAlt /> {destination.duration} Days */}
                       </div>
                       <div className="th-card-rating">
                         <FaStar /> {destination.rating}

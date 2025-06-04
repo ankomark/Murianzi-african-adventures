@@ -5,8 +5,8 @@ import {
   faSearch, 
   faFilter, 
   faMapMarkerAlt, 
-  faDollarSign, 
-  faCalendarAlt, 
+  // faDollarSign, 
+  // faCalendarAlt, 
   faStar, 
   faGlobe,
   faChevronRight,
@@ -328,7 +328,7 @@ const LocalDestinations = () => {
                   className={`favorite-btn ${favorites.includes(destination.id) ? 'active' : ''}`}
                   onClick={() => toggleFavorite(destination.id)}
                 >
-                  <FontAwesomeIcon icon={faHeart} />
+                  {/* <FontAwesomeIcon icon={faHeart} /> */}
                 </button>
               </div>
               <div className="featured-content">
@@ -339,12 +339,12 @@ const LocalDestinations = () => {
                 </div>
                 <div className="featured-meta">
                   <div className="meta-item">
-                    <FontAwesomeIcon icon={faDollarSign} />
-                    <span>From ${destination.price}</span>
+                    {/* <FontAwesomeIcon icon={faDollarSign} /> */}
+                    {/* <span>From ${destination.price}</span> */}
                   </div>
                   <div className="meta-item">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
-                    <span>{destination.duration} Days</span>
+                    {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
+                    {/* <span>{destination.duration} Days</span> */}
                   </div>
                   <div className="meta-item">
                     <FontAwesomeIcon icon={faStar} />
@@ -439,7 +439,7 @@ const LocalDestinations = () => {
                     checked={filters.duration === 'long'}
                     onChange={handleFilterChange}
                   />
-                  <span>Long (14 days)</span>
+                  {/* <span>Long (14 days)</span> */}
                 </label>
               </div>
             </div>
@@ -535,12 +535,12 @@ const LocalDestinations = () => {
                       <p className="description">{destination.desc}</p>
                       <div className="card-meta">
                         <div className="meta-item">
-                          <FontAwesomeIcon icon={faDollarSign} />
-                          <span>From ${destination.price}</span>
+                          {/* <FontAwesomeIcon icon={faDollarSign} /> */}
+                          {/* <span>From ${destination.price}</span> */}
                         </div>
                         <div className="meta-item">
-                          <FontAwesomeIcon icon={faCalendarAlt} />
-                          <span>{destination.duration} Days</span>
+                          {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
+                          <span>{destination.title} </span>
                         </div>
                         <div className="meta-item">
                           <FontAwesomeIcon icon={faStar} />

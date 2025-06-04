@@ -1,6 +1,6 @@
 // src/pages/PackagesPage.js
 import React, { useState, useEffect, useRef } from 'react';
-import { FaSearch, FaStar, FaMapMarkerAlt, FaFilter, FaTimes, FaCalendarAlt,  FaDollarSign, FaGlobe } from 'react-icons/fa';
+import { FaSearch, FaStar, FaMapMarkerAlt, FaFilter, FaTimes,  FaGlobe } from 'react-icons/fa';
 
 // Sample destination data
 const destinationCategories = [
@@ -284,7 +284,7 @@ const PackagesPage = () => {
           </div>
           
           <div className="filter-group">
-            <h4>Price Range</h4>
+            {/* <h4>Price Range</h4>
             <div className="price-range">
               <span>${filters.minPrice} - ${filters.maxPrice}</span>
               <input 
@@ -351,7 +351,7 @@ const PackagesPage = () => {
                 />
                 <span>Long (4 days)</span>
               </label>
-            </div>
+            </div> */}
           </div>
           
           <div className="filter-group">
@@ -427,7 +427,7 @@ const PackagesPage = () => {
                   <div className="card-image">
                     <img src={destination.img} alt={destination.title} loading="lazy" />
                     <div className="card-overlay">
-                      <button className="quick-view">View Details</button>
+                      {/* <button className="quick-view">View Details</button> */}
                     </div>
                     {destination.theme && <div className="theme-badge">{destination.theme}</div>}
                   </div>
@@ -440,12 +440,12 @@ const PackagesPage = () => {
                     <p className="description">{destination.desc}</p>
                     <div className="card-meta">
                       <div className="meta-item">
-                        <FaDollarSign />
-                        <span>From ${destination.price}</span>
+                        {/* <FaDollarSign /> */}
+                        {/* <span>From ${destination.price}</span> */}
                       </div>
                       <div className="meta-item">
-                        <FaCalendarAlt />
-                        <span>{destination.duration} Days</span>
+                        {/* <FaCalendarAlt /> */}
+                        {/* <span>{destination.duration} Days</span> */}
                       </div>
                       <div className="meta-item">
                         <FaStar />

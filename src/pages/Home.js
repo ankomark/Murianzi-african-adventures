@@ -62,19 +62,19 @@ const destinationCategories = [
         img: "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
-        title: "Mauritius(Beach)",
-        location: "Indonasia",
+        title: "Mauritius",
+        location: "Mauritius",
         desc: "Scenic View of West Nusa Tenggara Coastline",
         img: "https://images.pexels.com/photos/32332180/pexels-photo-32332180/free-photo-of-scenic-view-of-west-nusa-tenggara-coastline.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
-        title: "Seychelles(Beach)",
+        title: "Seychelles",
         location: "Republic of Seychelles",
         desc: "Anse Source d’Argent – Famous for unique granite boulders and turquoise water",
         img: "https://tour.epesicloud.com/app/storage/uploads/37/1675922078_94_woman-with-hat-sitting-chairs-beach-beautiful-tropical-beach-woman-relaxing-tropical-beach-koh-nangyuan-island_335224-1111.jpg"
       },
       {
-        title: "South Africa(Beach)",
+        title: "South Africa",
         location: "South Africa",
         desc: "Coral reefs, tropical fish, sea turtles, and sometimes whale sharks",
         img: "https://images.pexels.com/photos/12516856/pexels-photo-12516856.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -99,7 +99,7 @@ const destinationCategories = [
     subtitle: "Curated experiences for unique travel preferences",
     destinations: [
       {
-        title: "Lake Nakuru (Flamingos)",
+        title: "Lake Nakuru ",
         location: "Kenya",
         desc: "Birdwatcher’s paradise with thousands of pink flamingos and diverse wildlife around a scenic Rift Valley lake.",
         img: "https://images.pexels.com/photos/8341090/pexels-photo-8341090.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -296,7 +296,7 @@ const Home = () => {
                 <div className="card-image">
                   <img src={dest.img} alt={dest.title} loading="lazy" />
                   <div className="card-overlay">
-                    <button className="quick-view">View Details</button>
+                    {/* <button className="quick-view">view details</button> */}
                   </div>
                   {dest.theme && <div className="theme-badge">{dest.theme}</div>}
                 </div>
@@ -308,8 +308,8 @@ const Home = () => {
                   </div>
                   <p className="description">{dest.desc}</p>
                   <div className="card-footer">
-                    <span className="price">From $1,299</span>
-                    <span className="duration">7 Days</span>
+                    <span className="price"></span>
+                    <span className="duration"></span>
                   </div>
                 </div>
               </div>
@@ -430,7 +430,7 @@ const Home = () => {
             <div className="offer-content">
               <span className="offer-tag">PREMIUM</span>
               <h3>Luxury Safari Experience</h3>
-              <p>7-Day All-Inclusive Safari in Kenya & Tanzania</p>
+              <p> All-Inclusive Safari in Kenya & Tanzania</p>
               <ul>
                 <li>Private game drives</li>
                 <li>Luxury lodge accommodation</li>
@@ -438,9 +438,9 @@ const Home = () => {
                 <li>Gourmet dining experiences</li>
               </ul>
               <div className="price-info">
-                <span className="old-price">$4,999</span>
-                <span className="new-price">$3,799</span>
-                <span className="save">Save $1,200</span>
+                <span className="old-price"></span>
+                <span className="new-price"></span>
+                <span className="save">Save </span>
               </div>
               <button className="offer-button">Book Now</button>
             </div>
@@ -450,7 +450,7 @@ const Home = () => {
             <div className="offer-content">
               <span className="offer-tag">FAMILY</span>
               <h3>Family Adventure Package</h3>
-              <p>10-Day South Africa Explorer</p>
+              <p> South Africa Explorer</p>
               <ul>
                 <li>Cape Town & Garden Route</li>
                 <li>Family-friendly safari</li>
@@ -458,9 +458,9 @@ const Home = () => {
                 <li>All activities included</li>
               </ul>
               <div className="price-info">
-                <span className="old-price">$6,200</span>
-                <span className="new-price">$4,999</span>
-                <span className="save">Save $1,201</span>
+                <span className="old-price"></span>
+                <span className="new-price"></span>
+                <span className="save"></span>
               </div>
               <button className="offer-button">Book Now</button>
             </div>

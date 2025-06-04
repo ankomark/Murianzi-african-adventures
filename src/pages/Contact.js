@@ -59,13 +59,13 @@ const Contact = () => {
           <div className="info-card">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
             <h3>Visit Us</h3>
-            <p>123 Adventure Lane<br />Nairobi, Kenya</p>
+            <p>Kasarani<br />Nairobi, Kenya</p>
           </div>
 
           <div className="info-card">
             <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
             <h3>Call Us</h3>
-            <p>+254 701 071435<br />Mon-Fri: 9am - 5pm EAT</p>
+            <p>+254 724 579663 <br />Mon-Sun: 9am - 5pm EAT</p>
           </div>
 
           <div className="info-card">
@@ -78,7 +78,8 @@ const Contact = () => {
           <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
             <FaWhatsapp className="icon whatsapp-icon" />
             <h3>Chat on WhatsApp</h3>
-            <p>Click to message us directly<br />Fast response guaranteed!</p>
+            <button className='sendemail'>Click to message us directly</button>
+           
           </div>
 
           <div className="social-links">
