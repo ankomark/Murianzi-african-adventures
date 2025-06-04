@@ -21,8 +21,8 @@ const About = () => {
         <div className="mission-content">
           <h2>Our Mission</h2>
           <p className="mission-statement">
-            At TravelBuddy, we believe every journey should be extraordinary. 
-            We're dedicated to crafting unforgettable adventures that connect 
+           To provide extra ordinary trips, tailor-made unforgatable
+            adventures that connect 
             travelers with the soul of each destination.
           </p>
           <div className="mission-stats">
