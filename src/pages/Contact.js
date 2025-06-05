@@ -65,7 +65,7 @@ const Contact = () => {
           <div className="info-card">
             <FontAwesomeIcon icon={faPhoneAlt} className="icon" />
             <h3>Call Us</h3>
-            <p>+254 724 579663 <br />Mon-Sun: 9am - 5pm EAT</p>
+            <p>+254 705530881<br />Mon-Sun: 9am - 5pm EAT</p>
           </div>
 
           <div className="info-card">
