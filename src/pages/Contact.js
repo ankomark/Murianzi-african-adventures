@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaWhatsapp} from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
@@ -11,10 +11,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_ei1ywbh',
-      'template_czowim9',
+      'service_05a6zxn',
+      'template_qwv0g92',
       formRef.current,
-      '1Yz5aPyLELqyH_jkL'
+      'Z6g9sqcb-sDN2ZkJe'
     )
     .then((result) => {
       console.log(result.text);
@@ -26,15 +26,13 @@ const Contact = () => {
     });
   };
 
-  // WhatsApp click handler with your number
   const handleWhatsAppClick = () => {
-    const phoneNumber = '254 724579663';
+    const phoneNumber = '254724579663';
     const message = "Hello Elizabeth! I'm interested in your travel services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
-  // Social media handlers (replace with your actual links)
   const handleSocialClick = (platform) => {
     const urls = {
       facebook: 'https://facebook.com/yourpage',
@@ -59,7 +57,7 @@ const Contact = () => {
           <div className="info-card">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
             <h3>Visit Us</h3>
-            <p>Kasarani<br />Nairobi, Kenya ,Opposite Naivas supermarket</p>
+            <p>Kasarani<br />Nairobi, Kenya, Opposite Naivas supermarket</p>
           </div>
 
           <div className="info-card">
@@ -71,15 +69,13 @@ const Contact = () => {
           <div className="info-card">
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <h3>Email Us</h3>
-            <p>elizabeth@gmail.com<br />murianzisupport@gmail.com</p>
+            <p className='ema'>murianziafricanadventures@gmail.com</p>
           </div>
 
-          {/* WhatsApp Button with proper icon */}
           <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
             <FaWhatsapp className="whatsapp-icon" />
             <h3>Chat on WhatsApp</h3>
             <button className='sendemail'>Click here to message us directly</button>
-           
           </div>
 
           <div className="social-links">
@@ -98,7 +94,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
           <div className="form-group">
             <input type="text" name="user_name" placeholder="Your Name" required />
@@ -106,6 +101,10 @@ const Contact = () => {
 
           <div className="form-group">
             <input type="email" name="user_email" placeholder="Your Email" required />
+          </div>
+
+          <div className="form-group">
+            <input type="tel" name="user_phone" placeholder="Your Phone Number" required />
           </div>
 
           <div className="form-group">
