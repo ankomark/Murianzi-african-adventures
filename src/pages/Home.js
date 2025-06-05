@@ -57,14 +57,14 @@ const destinationCategories = [
     destinations: [
       {
         title: "Dubai",
-        location: "Midle-east",
+        location: "Middle-East",
         desc: "Marvel at layered bands of red rock revealing millions of years of geological history",
         img: "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         title: "Mauritius",
         location: "Mauritius",
-        desc: "Scenic View of West Nusa Tenggara Coastline",
+        desc: "Pristine white-sand beaches (e.g., Trou aux Biches, Belle Mare, Le Morne)",
         img: "https://images.pexels.com/photos/32332180/pexels-photo-32332180/free-photo-of-scenic-view-of-west-nusa-tenggara-coastline.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
@@ -127,7 +127,7 @@ const destinationCategories = [
         theme: "Luxury Escape"
       },
       {
-        title: "Rwenzori Mountains",
+        title: "Ruenzori Mountains",
         location: "Uganda",
         desc: "Also known as the 'Mountains of the Moon', home to glaciers",
         img: "https://images.pexels.com/photos/15250189/pexels-photo-15250189/free-photo-of-although-yoho-is-huge-in-winter-i-feel-like-it-s-a-hidden-gem.jpeg?auto=compress&cs=tinysrgb&w=600",
