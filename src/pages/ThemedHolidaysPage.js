@@ -377,7 +377,7 @@ const ThemedHolidaysPage = () => {
             <div className="th-testimonial-card">
               <div className="th-testimonial-content">
                 <div className="th-quote-icon">"</div>
-                <p className="th-testimonial-text">"Bonfire made our destination wedding in Bali absolutely stress-free. They handled every detail so we could just enjoy our special day."</p>
+                <p className="th-testimonial-text">"Murianzi made our destination wedding in Bali absolutely stress-free. They handled every detail so we could just enjoy our special day."</p>
                 <div className="th-author">
                   <div className="th-author-info">
                     <h4 className="th-author-name">Jessica & David</h4>
