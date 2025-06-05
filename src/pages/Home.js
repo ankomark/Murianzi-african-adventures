@@ -127,7 +127,7 @@ const destinationCategories = [
         theme: "Luxury Escape"
       },
       {
-        title: "Ruenzori Mountains",
+        title: "Rwenzori Mountains",
         location: "Uganda",
         desc: "Also known as the 'Mountains of the Moon', home to glaciers",
         img: "https://images.pexels.com/photos/15250189/pexels-photo-15250189/free-photo-of-although-yoho-is-huge-in-winter-i-feel-like-it-s-a-hidden-gem.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -145,19 +145,19 @@ const destinationCategories = [
 ];
 
 const heroImages = [
-  "https://www.urbannvacations.com/img/slides/mombasa.jpg",
+  "https://images.pexels.com/photos/70439/pexels-photo-70439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   "https://images.pexels.com/photos/3629227/pexels-photo-3629227.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://www.urbannvacations.com/img/slides/ROME.jpg",
-  "https://www.urbannvacations.com/img/slides/uae.jpg",
+  "https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg?auto=compress&cs=tinysrgb&w=600",
   'https://images.pexels.com/photos/219692/pexels-photo-219692.jpeg?auto=compress&cs=tinysrgb&w=600',
-  "https://www.urbannvacations.com/img/slides/MALDIVES.jpg",
+  "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://www.urbannvacations.com/img/slides/mtkenya.jpg",
   "https://www.urbannvacations.com/img/LEOPARD.jpg",
   "https://images.pexels.com/photos/1472612/pexels-photo-1472612.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://www.urbannvacations.com/img/PARIS.jpg",
   "https://www.urbannvacations.com/img/MAURITIUS.jpg",
   "https://www.urbannvacations.com/img/SINGAPORE2.jpg",
-  "https://www.urbannvacations.com/img/CRUISE1.jpg",
+  "https://images.pexels.com/photos/68550/thailand-elephant-sunset-nature-68550.jpeg?auto=compress&cs=tinysrgb&w=600",
 
   'https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=600',
   "https://images.pexels.com/photos/17845104/pexels-photo-17845104/free-photo-of-kanchanjunga-mountain-sunrise.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -166,10 +166,12 @@ const heroImages = [
 
    "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/8341090/pexels-photo-8341090.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1589237/pexels-photo-1589237.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/8341096/pexels-photo-8341096.jpeg?auto=compress&cs=tinysrgb&w=600",
   
-  "https://images.pexels.com/photos/12516856/pexels-photo-12516856.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/30705455/pexels-photo-30705455/free-photo-of-majestic-rhinoceros-grazing-in-kenyan-wilderness.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/757142/pexels-photo-757142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/13142739/pexels-photo-13142739.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=600",
 
 ];
 
