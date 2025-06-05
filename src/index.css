@@ -1237,7 +1237,11 @@
 .footerh{
   color: aliceblue;
 }
-
+.team-member p:last-child {
+  font-style: italic;
+  color: #f59e0b;
+  margin-top: 0.5rem;
+}
 
 
 
