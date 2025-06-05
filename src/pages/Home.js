@@ -145,14 +145,15 @@ const destinationCategories = [
 ];
 
 const heroImages = [
-  "https://www.urbannvacations.com/img/slides/uae.jpg",
+  "https://images.pexels.com/photos/442579/pexels-photo-442579.jpeg?auto=compress&cs=tinysrgb&w=1600",
   
   "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/639078/pexels-photo-639078.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/20620394/pexels-photo-20620394/free-photo-of-flock-of-flamingos-on-lake.png?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=1600",
   // Replace urbannvacations.com images with high-resolution Pexels or local assets
   "https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace LEOPARD.jpg
@@ -173,6 +174,7 @@ const heroImages = [
   "https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/457876/pexels-photo-457876.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/221387/pexels-photo-221387.jpeg?auto=compress&cs=tinysrgb&w=1600"
 ];
 
 const Home = () => {
