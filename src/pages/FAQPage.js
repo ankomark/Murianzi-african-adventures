@@ -16,8 +16,8 @@ const FAQPage = () => {
     general: [
       {
         id: 'gen1',
-        question: "What is murianzi african adventures?",
-        answer: "murianzi african adventures is a premier travel agency specializing in curated travel experiences and relaxing moments. We combine city exploration with rejuvenating getaways to create unique travel experiences that cater to all types of travelers."
+        question: "What is Murianzi African Adventures?",
+        answer: "Murianzi African Adventures is a premier travel agency specializing in curated travel experiences and relaxing moments. We combine city exploration with rejuvenating getaways to create unique travel experiences that cater to all types of travelers."
       },
       {
         id: 'gen2',
