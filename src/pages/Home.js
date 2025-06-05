@@ -46,7 +46,7 @@ const destinationCategories = [
         title: "Sossusvlei Dunes",
         location: "Namib Desert, Namibia",
         desc: "Towering red sand dunes in the world's oldest desert",
-        img: "https://images.pexels.com/photos/9989648/pexels-photo-9989648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://images.pexels.com/photos/998653/pexels-photo-998653.jpeg?auto=compress&cs=tinysrgb&w=600"
       }
     ]
   },
