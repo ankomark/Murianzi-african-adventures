@@ -16,7 +16,7 @@ const FAQPage = () => {
     general: [
       {
         id: 'gen1',
-        question: "What is Murianzi African Adventures?",
+        question: "Who are we?",
         answer: "Murianzi African Adventures is a premier travel agency specializing in curated travel experiences and relaxing moments. We combine city exploration with rejuvenating getaways to create unique travel experiences that cater to all types of travelers."
       },
       {
@@ -29,11 +29,7 @@ const FAQPage = () => {
         question: "What are your operating hours?",
         answer: "Our customer service team is available 24/7. Our physical offices are open Monday through Sunday from 9:00 AM to 6:00 PM local time."
       },
-      {
-        id: 'gen4',
-        question: "Do you offer travel insurance?",
-        answer: "Yes, we offer comprehensive travel insurance options that can be added to any booking. Our policies cover trip cancellation, medical emergencies, lost luggage, and more. You can select insurance options during the booking process."
-      }
+     
     ],
     booking: [
       {
@@ -66,7 +62,7 @@ const FAQPage = () => {
       {
         id: 'pay2',
         question: "Are there any hidden fees?",
-        answer: "We pride ourselves on transparent pricing. All mandatory taxes and fees are included in the quoted price. Optional services such as travel insurance, seat selection, or special requests may incur additional charges that will be clearly disclosed during booking."
+        answer: "We pride ourselves on transparent pricing. All mandatory taxes and fees are included in the quoted price. Optional services such  seat selection, or special requests may incur additional charges that will be clearly disclosed during booking."
       },
       {
         id: 'pay3',
@@ -88,7 +84,7 @@ const FAQPage = () => {
       {
         id: 'travel2',
         question: "What health requirements should I know about?",
-        answer: "Some destinations require specific vaccinations or health documentation. We recommend consulting with your healthcare provider or a travel medicine clinic at least 6-8 weeks before travel. COVID-19 requirements vary by destination and are subject to change."
+        answer: "Some destinations require specific vaccinations or health documentation. We recommend consulting with your healthcare provider or a travel medicine clinic at least 6-8 weeks before travel."
       },
       {
         id: 'travel3',
