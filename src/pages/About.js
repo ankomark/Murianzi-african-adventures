@@ -71,12 +71,17 @@ const About = () => {
           <div className="team-member">
             <img src={judith} alt='anko mark' />
             <h3>Elizabeth Omollo</h3>
-            <p>CEO & Founder</p>
+            <p>CEO & Founder</p> <hr/>
+            <p> With over a decade of experience in tourism and a deep love for region/culture & nature, Elizabeth brings a vision of sustainable and personalized travel to every tour. Before starting Murianzi African Adventures, she worked as a she worked as an Operations Manager for over a  decade,exploring several destinations in East Africa, Middle East and  Asia.</p><hr/>
+            <p>“Travel should not just be about seeing a place — it should be about feeling connected to it.”</p>
           </div>
           <div className="team-member">
             <img src={murianzi} alt='anko mark' />
             <h3>Judith Omogi</h3>
-            <p>Co-Founder</p>
+            <p>Co-Founder</p><hr/>
+            <p>Judith Omogi – Co-Founder & Operations Director
+            is the logistical mastermind behind the scenes, ensuring every journey runs smoothly. With a background in logistics, events, travel she has  helped craft seamless adventures for travelers from all over the world.</p><hr/>
+            <p>“Every adventure begins with a plan — we craft journeys that let you explore the world with ease and wonder.”</p>
           </div>
           {/* Add more team members */}
         </div>
