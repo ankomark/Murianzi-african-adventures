@@ -145,6 +145,7 @@ const destinationCategories = [
 ];
 
 const heroImages = [
+  'https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=600',
   "https://images.pexels.com/photos/17845104/pexels-photo-17845104/free-photo-of-kanchanjunga-mountain-sunrise.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/15250189/pexels-photo-15250189/free-photo-of-although-yoho-is-huge-in-winter-i-feel-like-it-s-a-hidden-gem.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.pexels.com/photos/15250189/pexels-photo-15250189/free-photo-of-although-yoho-is-huge-in-winter-i-feel-like-it-s-a-hidden-gem.jpeg?auto=compress&cs=tinysrgb&w=600",
