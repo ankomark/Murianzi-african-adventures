@@ -145,6 +145,8 @@ const destinationCategories = [
 ];
 
 const heroImages = [
+  "https://www.urbannvacations.com/img/slides/mombasa.jpg",
+  "https://www.urbannvacations.com/img/slides/ROME.jpg",
   "https://www.urbannvacations.com/img/slides/uae.jpg",
   "https://www.urbannvacations.com/img/slides/MALDIVES.jpg",
   "https://www.urbannvacations.com/img/slides/mtkenya.jpg",
