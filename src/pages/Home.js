@@ -145,10 +145,13 @@ const destinationCategories = [
 ];
 
 const heroImages = [
+  "https://www.urbannvacations.com/img/slides/uae.jpg",
+  
   "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/20620394/pexels-photo-20620394/free-photo-of-flock-of-flamingos-on-lake.png?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=1600",
   // Replace urbannvacations.com images with high-resolution Pexels or local assets
@@ -167,7 +170,9 @@ const heroImages = [
   "https://images.pexels.com/photos/757142/pexels-photo-757142.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/13142739/pexels-photo-13142739.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  "https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  "https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/457876/pexels-photo-457876.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1600",
 ];
 
 const Home = () => {
@@ -265,8 +270,8 @@ const Home = () => {
             <span>Popular:</span>
             <a href="#popular">Safaris</a>
             <a href="#international">Beach Getaways</a>
-            <a href="#themed">Cultural Tours</a>
-            <a href="#themed">Adventure Travel</a>
+            <a href="#local">Cultural Tours</a>
+            <a href="#international">Adventure Travel</a>
           </div>
           
           {/* Hero image indicators */}

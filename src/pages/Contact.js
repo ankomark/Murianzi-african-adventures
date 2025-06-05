@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp } from 'react-icons/fa';
-import { faMapMarkerAlt, faPhoneAlt, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPhoneAlt,  faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const formRef = useRef();
@@ -66,11 +66,11 @@ const Contact = () => {
             <p>+254 705530881<br />Mon-Sun: 9am - 5pm EAT</p>
           </div>
 
-          <div className="info-card">
+          {/* <div className="info-card">
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <h3>Email Us</h3>
             <p className='ema'>murianziafricanadventures@gmail.com</p>
-          </div>
+          </div> */}
 
           <div className="info-card whatsapp-card" onClick={handleWhatsAppClick}>
             <FaWhatsapp className="whatsapp-icon" />
@@ -96,6 +96,7 @@ const Contact = () => {
 
         <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
           <div className="form-group">
+            <label className='label1'>Send us an email </label>
             <input type="text" name="user_name" placeholder="Your Name" required />
           </div>
 

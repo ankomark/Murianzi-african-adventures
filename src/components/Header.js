@@ -35,6 +35,7 @@ const Header = () => {
           <NavLink to="/ThemedHolidaysPage" className="nav-link">Themed Holiday</NavLink>
           <NavLink to="/Corporates" className="nav-link">Corporates</NavLink>
           <NavLink to="/LocalDestinations" className="nav-link">Local Destinations</NavLink>
+          <NavLink to="/FAQPage" className="nav-link">FAQS</NavLink>
           <NavLink to="/about" className="nav-link">About</NavLink>
           <NavLink to="/contact" className="nav-link">Contact</NavLink>
         </nav>
@@ -58,6 +59,7 @@ const Header = () => {
         <NavLink to="/ThemedHolidaysPage" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Themed Holiday</NavLink>
         <NavLink to="/Corporates" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Corporates</NavLink>
         <NavLink to="/LocalDestinations" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Local Destinations</NavLink>
+        <NavLink to="/FAQPage" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQPS</NavLink>
         <NavLink to="/about" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
         <NavLink to="/contact" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink>
       </div>

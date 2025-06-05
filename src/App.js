@@ -14,6 +14,7 @@ import LocalDestinations from './pages/LocalDestinations';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Local from './pages/Local';
+import FAQPage from './pages/FAQPage'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/Corporates' element ={<Corporates/>}/>
         <Route path='/LocalDestinations' element ={<LocalDestinations/>}/>
         <Route path='/Local' element ={<Local/>}/>
+        <Route path='/FAQPage' element ={<FAQPage/>}/>
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
        
