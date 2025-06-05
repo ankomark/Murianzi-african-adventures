@@ -346,10 +346,13 @@
   text-align: center;
   color: white;
   overflow: hidden;
+  /* Remove unsupported transition for smoother changes */
   transition: background-image 1.5s ease-in-out;
-  image-rendering: -webkit-optimize-contrast; /* Chrome/Safari */
-  image-rendering: crisp-edges; /* Standard */
+  /* Remove image-rendering tweaks that may cause blurriness */
+  /* image-rendering: -webkit-optimize-contrast; */
+  /* image-rendering: crisp-edges; */
   backface-visibility: hidden;
+  will-change: background-image; /* Hint to browser for optimization */
 }
 
 .hero-overlay {
@@ -361,8 +364,8 @@
   /* Subtle gradient that enhances rather than obscures the image */
   background: linear-gradient(
     to bottom, 
-    rgba(0, 0, 0, 0.2) 0%, 
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.5) 0%, 
+    rgba(0, 0, 0, 0.3) 100%
   );
   z-index: 1;
   /* Allows some image texture to show through */
@@ -380,6 +383,14 @@
   justify-content: center;
   gap: 10px;
   margin-top: 30px;
+}
+/* Add fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.hero-section {
+  animation: fadeIn 1.2s ease-in-out;
 }
 .hero-content h1 {
   font-size: 3.5rem;

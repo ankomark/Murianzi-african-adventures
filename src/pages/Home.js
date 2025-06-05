@@ -145,34 +145,29 @@ const destinationCategories = [
 ];
 
 const heroImages = [
-  "https://images.pexels.com/photos/70439/pexels-photo-70439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/3629227/pexels-photo-3629227.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg?auto=compress&cs=tinysrgb&w=600",
-  'https://images.pexels.com/photos/219692/pexels-photo-219692.jpeg?auto=compress&cs=tinysrgb&w=600',
-  "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://www.urbannvacations.com/img/slides/mtkenya.jpg",
-  "https://www.urbannvacations.com/img/LEOPARD.jpg",
-  "https://images.pexels.com/photos/1472612/pexels-photo-1472612.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://www.urbannvacations.com/img/PARIS.jpg",
-  "https://www.urbannvacations.com/img/MAURITIUS.jpg",
-  "https://www.urbannvacations.com/img/SINGAPORE2.jpg",
-  "https://images.pexels.com/photos/68550/thailand-elephant-sunset-nature-68550.jpeg?auto=compress&cs=tinysrgb&w=600",
-
-  'https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=600',
-  "https://images.pexels.com/photos/17845104/pexels-photo-17845104/free-photo-of-kanchanjunga-mountain-sunrise.jpeg?auto=compress&cs=tinysrgb&w=600",
-  
-  "https://www.urbannvacations.com/img/slides/MALDIVES.jpg",
-
-   "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/8341090/pexels-photo-8341090.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/8341096/pexels-photo-8341096.jpeg?auto=compress&cs=tinysrgb&w=600",
-  
-  "https://images.pexels.com/photos/30705455/pexels-photo-30705455/free-photo-of-majestic-rhinoceros-grazing-in-kenyan-wilderness.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/757142/pexels-photo-757142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/13142739/pexels-photo-13142739.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=600",
-
+  "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1591375/pexels-photo-1591375.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/20620394/pexels-photo-20620394/free-photo-of-flock-of-flamingos-on-lake.png?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  // Replace urbannvacations.com images with high-resolution Pexels or local assets
+  "https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace LEOPARD.jpg
+  "https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace PARIS.jpg
+  "https://images.pexels.com/photos/175416/pexels-photo-175416.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace MAURITIUS.jpg
+  "https://images.pexels.com/photos/1122414/pexels-photo-1122414.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace SINGAPORE2.jpg
+  "https://images.pexels.com/photos/68550/thailand-elephant-sunset-nature-68550.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/2115367/pexels-photo-2115367.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/175416/pexels-photo-175416.jpeg?auto=compress&cs=tinysrgb&w=1600", // Replace MALDIVES.jpg
+  "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/8341090/pexels-photo-8341090.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/8341096/pexels-photo-8341096.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/30705455/pexels-photo-30705455/free-photo-of-majestic-rhinoceros-grazing-in-kenyan-wilderness.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/757142/pexels-photo-757142.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/13142739/pexels-photo-13142739.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "https://images.pexels.com/photos/1457812/pexels-photo-1457812.jpeg?auto=compress&cs=tinysrgb&w=1600"
 ];
 
 const Home = () => {
@@ -181,6 +176,14 @@ const Home = () => {
   const [filteredCategories, setFilteredCategories] = useState(destinationCategories);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const intervalRef = useRef(null);
+
+   // Preload hero images
+   useEffect(() => {
+    heroImages.forEach(img => {
+      const image = new Image();
+      image.src = img;
+    });
+  }, []);
 
   // Hero image rotation
   useEffect(() => {
