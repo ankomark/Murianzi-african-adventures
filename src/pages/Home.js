@@ -20,13 +20,13 @@ const destinationCategories = [
         title: "Victoria Falls Adventure",
         location: "Zambia/Zimbabwe",
         desc: "Discover 'The Smoke That Thunders', one of the world's largest waterfalls",
-        img: "https://images.pexels.com/photos/757142/pexels-photo-757142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://images.pexels.com/photos/31810594/pexels-photo-31810594/free-photo-of-majestic-waterfall-surrounded-by-lush-forest.jpeg?auto=compress&cs=tinysrgb&w=1600"
       },
       {
         title: "Serengeti National Park",
         location: "Tanzania",
         desc: "Vast plains teeming with wildlife and the annual migration",
-        img: "https://images.pexels.com/photos/13098896/pexels-photo-13098896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://images.pexels.com/photos/16168264/pexels-photo-16168264/free-photo-of-antelopes-and-jeep-in-maasai-mara-game-reserve-in-kenya.jpeg?auto=compress&cs=tinysrgb&w=1600"
       },
 
 
@@ -40,7 +40,7 @@ const destinationCategories = [
         title: "Table Mountain Experience",
         location: "Cape Town, South Africa",
         desc: "Panoramic views of Cape Town and the Atlantic Ocean",
-        img: "https://images.pexels.com/photos/32264032/pexels-photo-32264032/free-photo-of-dramatic-mountain-range-under-moody-skies.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://images.pexels.com/photos/29049/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600"
       },
       {
         title: "Sossusvlei Dunes",

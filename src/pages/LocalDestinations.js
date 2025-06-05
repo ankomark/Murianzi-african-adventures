@@ -17,10 +17,10 @@ import {
 const destinations = [
   {
     id: 1,
-    title: "Maasai Mara Safari",
+    title: "Maasai Mara ",
     location: "Kenya",
-    desc: "Experience the Great Migration and witness Africa's iconic wildlife in their natural habitat.",
-    img: "https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "witness Africa's iconic wildlife in their natural habitat.",
+    img: "https://images.pexels.com/photos/5044026/pexels-photo-5044026.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 1299,
     duration: 7,
@@ -32,7 +32,7 @@ const destinations = [
     title: "Serengeti Migration",
     location: "Tanzania",
     desc: "Witness the spectacular Great Migration across the vast plains of Serengeti.",
-    img: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/15815060/pexels-photo-15815060/free-photo-of-aerial-view-of-herds-of-zebras-and-wildebeests.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 2199,
     duration: 10,
@@ -55,7 +55,7 @@ const destinations = [
     title: "Gorilla Trekking Adventure",
     location: "Rwanda",
     desc: "An unforgettable encounter with endangered mountain gorillas in their natural habitat.",
-    img: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/15047897/pexels-photo-15047897/free-photo-of-photo-of-gorilla-on-the-grass.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 3499,
     duration: 5,
@@ -78,7 +78,7 @@ const destinations = [
     title: "Lake Nakuru Flamingo Safari",
     location: "Kenya",
     desc: "See millions of flamingos and endangered rhinos in this stunning national park.",
-    img: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/31402187/pexels-photo-31402187/free-photo-of-flock-of-terns-and-pelicans-on-a-lake.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 999,
     duration: 3,
@@ -89,7 +89,7 @@ const destinations = [
     title: "Ngorongoro Crater Experience",
     location: "Tanzania",
     desc: "Explore the world's largest inactive volcanic caldera teeming with wildlife.",
-    img: "https://images.pexels.com/photos/25950513/pexels-photo-25950513/free-photo-of-4x4-car-driving-on-dirt-road-in-africa.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "https://images.pexels.com/photos/18819323/pexels-photo-18819323/free-photo-of-aerial-view-of-an-erupting-volcano.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 1899,
     duration: 6,
@@ -99,41 +99,41 @@ const destinations = [
     id: 8,
     title: "Amboseli Elephant Safari",
     location: "Kenya",
-    desc: "View massive elephant herds with the majestic Mount Kilimanjaro as your backdrop.",
-    img: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    desc: "View massive animals with the majestic Mount Kilimanjaro as your backdrop.",
+    img: "https://images.pexels.com/photos/32342182/pexels-photo-32342182/free-photo-of-majestic-leopard-in-serengeti-tanzania.jpeg?auto=compress&cs=tinysrgb&w=600",
     theme: "Wildlife",
     price: 1399,
     duration: 4,
     rating: 4.7
   },
-  {
-    id: 9,
-    title: "Lamu Island Cultural Retreat",
-    location: "Kenya",
-    desc: "Relax in a historic Swahili town with pristine beaches and rich cultural heritage.",
-    img: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    theme: "Beach",
-    price: 1299,
-    duration: 8,
-    rating: 4.6
-  },
-  {
-    id: 10,
-    title: "Queen Elizabeth National Park",
-    location: "Uganda",
-    desc: "Enjoy game drives and boat safaris in one of Africa's most biodiverse parks.",
-    img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    theme: "Wildlife",
-    price: 1599,
-    duration: 6,
-    rating: 4.5
-  },
+  // {
+  //   id: 9,
+  //   title: "Lamu Island Cultural Retreat",
+  //   location: "Kenya",
+  //   desc: "Relax in a historic Swahili town with pristine beaches and rich cultural heritage.",
+  //   img: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  //   theme: "Beach",
+  //   price: 1299,
+  //   duration: 8,
+  //   rating: 4.6
+  // },
+  // {
+  //   id: 10,
+  //   title: "Queen Elizabeth National Park",
+  //   location: "Uganda",
+  //   desc: "Enjoy game drives and boat safaris in one of Africa's most biodiverse parks.",
+  //   img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  //   theme: "Wildlife",
+  //   price: 1599,
+  //   duration: 6,
+  //   rating: 4.5
+  // },
   {
     id: 11,
     title: "Tsavo Wilderness Experience",
     location: "Kenya",
     desc: "Discover the vast wilderness and the famous red elephants of Tsavo.",
-    img: "https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/19320975/pexels-photo-19320975/free-photo-of-elephants-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 1199,
     duration: 5,
@@ -144,7 +144,7 @@ const destinations = [
     title: "Lake Victoria Sunset Cruise",
     location: "Uganda/Kenya/Tanzania",
     desc: "Cruise the largest lake in Africa while enjoying stunning sunset views.",
-    img: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Adventure",
     price: 1699,
     duration: 7,
@@ -155,24 +155,24 @@ const destinations = [
     title: "Diani Beach Luxury Getaway",
     location: "Kenya",
     desc: "Relax on white sandy beaches with crystal-clear turquoise waters.",
-    img: "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    img: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Beach",
     price: 1399,
     duration: 9,
     rating: 4.8
   },
-  {
-    id: 14,
-    title: "Bwindi Gorilla Trekking",
-    location: "Uganda",
-    desc: "Trek through dense forests for a rare encounter with mountain gorillas.",
-    img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    theme: "Wildlife",
-    price: 3299,
-    duration: 4,
-    rating: 4.9,
-    featured: true
-  },
+  // {
+  //   id: 14,
+  //   title: "Bwindi Gorilla Trekking",
+  //   location: "Uganda",
+  //   desc: "Trek through dense forests for a rare encounter with mountain gorillas.",
+  //   img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  //   theme: "Wildlife",
+  //   price: 3299,
+  //   duration: 4,
+  //   rating: 4.9,
+  //   featured: true
+  // },
   {
     id: 15,
     title: "Nairobi National Park Safari",
@@ -516,7 +516,7 @@ const LocalDestinations = () => {
                     <div className="card-image">
                       <img src={destination.img} alt={destination.title} loading="lazy" />
                       <div className="card-overlay">
-                        <button className="quick-view">View Details</button>
+                        {/* <button className="quick-view">View Details</button> */}
                       </div>
                       {destination.theme && <div className="theme-badge">{destination.theme}</div>}
                       <button 

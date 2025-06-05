@@ -2987,8 +2987,8 @@ select {
 .local-hero {
   position: relative;
   height: 70vh;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-              url('https://images.pexels.com/photos/2862070/pexels-photo-2862070.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover no-repeat;
+  background: 
+              url('https://images.pexels.com/photos/358358/pexels-photo-358358.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
