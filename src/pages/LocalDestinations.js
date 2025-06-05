@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faTimes, 
-  faSearch, 
-  faFilter, 
+  // faTimes, 
+  // faSearch, 
+  // faFilter, 
   faMapMarkerAlt, 
   // faDollarSign, 
   // faCalendarAlt, 
   faStar, 
-  faGlobe,
+  // faGlobe,
   faChevronRight,
   faHeart
 } from '@fortawesome/free-solid-svg-icons';
@@ -89,7 +89,7 @@ const destinations = [
     title: "Ngorongoro Crater Experience",
     location: "Tanzania",
     desc: "Explore the world's largest inactive volcanic caldera teeming with wildlife.",
-    img: "https://images.pexels.com/photos/18819323/pexels-photo-18819323/free-photo-of-aerial-view-of-an-erupting-volcano.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: "https://images.pexels.com/photos/5272972/pexels-photo-5272972.jpeg?auto=compress&cs=tinysrgb&w=600",
     theme: "Wildlife",
     price: 1899,
     duration: 6,
@@ -97,37 +97,16 @@ const destinations = [
   },
   {
     id: 8,
-    title: "Amboseli Elephant Safari",
+    title: "Amboseli Elephant ",
     location: "Kenya",
     desc: "View massive animals with the majestic Mount Kilimanjaro as your backdrop.",
-    img: "https://images.pexels.com/photos/32342182/pexels-photo-32342182/free-photo-of-majestic-leopard-in-serengeti-tanzania.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "https://images.pexels.com/photos/50579/africa-elephant-words-animal-50579.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 1399,
     duration: 4,
     rating: 4.7
   },
-  // {
-  //   id: 9,
-  //   title: "Lamu Island Cultural Retreat",
-  //   location: "Kenya",
-  //   desc: "Relax in a historic Swahili town with pristine beaches and rich cultural heritage.",
-  //   img: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  //   theme: "Beach",
-  //   price: 1299,
-  //   duration: 8,
-  //   rating: 4.6
-  // },
-  // {
-  //   id: 10,
-  //   title: "Queen Elizabeth National Park",
-  //   location: "Uganda",
-  //   desc: "Enjoy game drives and boat safaris in one of Africa's most biodiverse parks.",
-  //   img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  //   theme: "Wildlife",
-  //   price: 1599,
-  //   duration: 6,
-  //   rating: 4.5
-  // },
+ 
   {
     id: 11,
     title: "Tsavo Wilderness Experience",
@@ -161,18 +140,7 @@ const destinations = [
     duration: 9,
     rating: 4.8
   },
-  // {
-  //   id: 14,
-  //   title: "Bwindi Gorilla Trekking",
-  //   location: "Uganda",
-  //   desc: "Trek through dense forests for a rare encounter with mountain gorillas.",
-  //   img: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  //   theme: "Wildlife",
-  //   price: 3299,
-  //   duration: 4,
-  //   rating: 4.9,
-  //   featured: true
-  // },
+
   {
     id: 15,
     title: "Nairobi National Park Safari",
@@ -189,7 +157,7 @@ const destinations = [
     title: "Lake Manyara Tree-Climbing Lions",
     location: "Tanzania",
     desc: "See the famous tree-climbing lions and vast flamingo flocks.",
-    img: "https://images.pexels.com/photos/247600/pexels-photo-247600.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "https://images.pexels.com/photos/31020850/pexels-photo-31020850/free-photo-of-lionesses-relaxing-on-tree-in-samburu-kenya.jpeg?auto=compress&cs=tinysrgb&w=1600",
     theme: "Wildlife",
     price: 1499,
     duration: 5,
@@ -198,56 +166,10 @@ const destinations = [
 ];
 
 const LocalDestinations = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredDestinations, setFilteredDestinations] = useState(destinations);
-  const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState([]);
-  const [filters, setFilters] = useState({
-    minPrice: 0,
-    maxPrice: 5000,
-    duration: 'all',
-    theme: 'all',
-    rating: 0
-  });
   const cardsRef = useRef({});
-
-  useEffect(() => {
-    let result = destinations;
-    
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      result = result.filter(dest => 
-        dest.title.toLowerCase().includes(term) ||
-        dest.location.toLowerCase().includes(term) ||
-        dest.desc.toLowerCase().includes(term) ||
-        (dest.theme && dest.theme.toLowerCase().includes(term))
-      );
-    }
-    
-    result = result.filter(dest => 
-      dest.price >= filters.minPrice && dest.price <= filters.maxPrice
-    );
-    
-    if (filters.duration !== 'all') {
-      if (filters.duration === 'short') {
-        result = result.filter(dest => dest.duration <= 7);
-      } else if (filters.duration === 'medium') {
-        result = result.filter(dest => dest.duration > 7 && dest.duration <= 14);
-      } else if (filters.duration === 'long') {
-        result = result.filter(dest => dest.duration > 14);
-      }
-    }
-    
-    if (filters.theme !== 'all') {
-      result = result.filter(dest => dest.theme === filters.theme);
-    }
-    
-    if (filters.rating > 0) {
-      result = result.filter(dest => dest.rating >= filters.rating);
-    }
-    
-    setFilteredDestinations(result);
-  }, [searchTerm, filters]);
+  
+  const featuredDestinations = destinations.filter(dest => dest.featured);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -267,25 +189,7 @@ const LocalDestinations = () => {
     });
     
     return () => observer.disconnect();
-  }, [filteredDestinations]);
-
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const resetFilters = () => {
-    setFilters({
-      minPrice: 0,
-      maxPrice: 5000,
-      duration: 'all',
-      theme: 'all',
-      rating: 0
-    });
-  };
+  }, []);
 
   const toggleFavorite = (id) => {
     setFavorites(prev => 
@@ -294,9 +198,6 @@ const LocalDestinations = () => {
         : [...prev, id]
     );
   };
-
-  const themes = [...new Set(destinations.map(dest => dest.theme))];
-  const featuredDestinations = destinations.filter(dest => dest.featured);
 
   return (
     <div className="local-destinations-page">
@@ -328,7 +229,7 @@ const LocalDestinations = () => {
                   className={`favorite-btn ${favorites.includes(destination.id) ? 'active' : ''}`}
                   onClick={() => toggleFavorite(destination.id)}
                 >
-                  {/* <FontAwesomeIcon icon={faHeart} /> */}
+                  <FontAwesomeIcon icon={faHeart} />
                 </button>
               </div>
               <div className="featured-content">
@@ -339,11 +240,9 @@ const LocalDestinations = () => {
                 </div>
                 <div className="featured-meta">
                   <div className="meta-item">
-                    {/* <FontAwesomeIcon icon={faDollarSign} /> */}
-                    {/* <span>From ${destination.price}</span> */}
+                    {/* <span>${destination.price}</span> */}
                   </div>
                   <div className="meta-item">
-                    {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
                     {/* <span>{destination.duration} Days</span> */}
                   </div>
                   <div className="meta-item">
@@ -361,210 +260,53 @@ const LocalDestinations = () => {
       <section className="all-destinations">
         <div className="section-header">
           <h2>All Destinations</h2>
-          <p>Find your perfect African adventure</p>
+          <p>Explore our full collection of African adventures</p>
         </div>
 
-        <div className="local-container">
-          <aside className={`filters-sidebar ${showFilters ? 'mobile-visible' : ''}`}>
-            <div className="filters-header">
-              <h3>Filter Destinations</h3>
-              <button className="close-filters" onClick={() => setShowFilters(false)}>
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-            </div>
-            
-            <div className="filter-group">
-              <h4>Price Range</h4>
-              <div className="price-range">
-                <span>${filters.minPrice} - ${filters.maxPrice}</span>
-                <input 
-                  type="range" 
-                  min="0" 
-                  max="5000" 
-                  step="100"
-                  name="minPrice"
-                  value={filters.minPrice}
-                  onChange={handleFilterChange}
-                />
-                <input 
-                  type="range" 
-                  min="0" 
-                  max="5000" 
-                  step="100"
-                  name="maxPrice"
-                  value={filters.maxPrice}
-                  onChange={handleFilterChange}
-                />
+        <div className="destinations-grid">
+          {destinations.map(destination => (
+            <div 
+              className="destination-card"
+              key={destination.id}
+              ref={el => cardsRef.current[destination.id] = el}
+              style={{ 
+                opacity: 0,
+                transform: 'translateY(50px)',
+                transition: 'opacity 0.5s ease, transform 0.5s ease'
+              }}
+            >
+              <div className="card-image">
+                <img src={destination.img} alt={destination.title} loading="lazy" />
+                {destination.theme && <div className="theme-badge">{destination.theme}</div>}
+                <button 
+                  className={`favorite-btn ${favorites.includes(destination.id) ? 'active' : ''}`}
+                  onClick={() => toggleFavorite(destination.id)}
+                >
+                  <FontAwesomeIcon icon={faHeart} />
+                </button>
               </div>
-            </div>
-            
-            <div className="filter-group">
-              <h4>Duration</h4>
-              <div className="filter-options">
-                <label>
-                  <input 
-                    type="radio" 
-                    name="duration" 
-                    value="all" 
-                    checked={filters.duration === 'all'}
-                    onChange={handleFilterChange}
-                  />
-                  <span>All Durations</span>
-                </label>
-                <label>
-                  <input 
-                    type="radio" 
-                    name="duration" 
-                    value="short" 
-                    checked={filters.duration === 'short'}
-                    onChange={handleFilterChange}
-                  />
-                  <span>Short (≤7 days)</span>
-                </label>
-                <label>
-                  <input 
-                    type="radio" 
-                    name="duration" 
-                    value="medium" 
-                    checked={filters.duration === 'medium'}
-                    onChange={handleFilterChange}
-                  />
-                  <span>Medium (8-14 days)</span>
-                </label>
-                <label>
-                  <input 
-                    type="radio" 
-                    name="duration" 
-                    value="long" 
-                    checked={filters.duration === 'long'}
-                    onChange={handleFilterChange}
-                  />
-                  {/* <span>Long (14 days)</span> */}
-                </label>
-              </div>
-            </div>
-            
-            <div className="filter-group">
-              <h4>Experience Theme</h4>
-              <select 
-                name="theme" 
-                value={filters.theme}
-                onChange={handleFilterChange}
-              >
-                <option value="all">All Themes</option>
-                {themes.map(theme => (
-                  <option key={theme} value={theme}>{theme}</option>
-                ))}
-              </select>
-            </div>
-            
-            <div className="filter-group">
-              <h4>Minimum Rating</h4>
-              <div className="rating-filter">
-                {[1, 2, 3, 4, 5].map(rating => (
-                  <button
-                    key={rating}
-                    className={`rating-star ${filters.rating >= rating ? 'active' : ''}`}
-                    onClick={() => setFilters(prev => ({
-                      ...prev,
-                      rating: prev.rating === rating ? 0 : rating
-                    }))}
-                  >
-                    <FontAwesomeIcon icon={faStar} />
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            <button className="reset-filters" onClick={resetFilters}>
-              Reset All Filters
-            </button>
-          </aside>
-
-          <main className="local-grid">
-            <div className="grid-header">
-              <h2>{filteredDestinations.length} Destinations Available</h2>
-              <div className="controls">
-                <div className="search-box">
-                  <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                  <input 
-                    type="text" 
-                    placeholder="Search destinations..." 
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
+              <div className="card-content">
+                <h3>{destination.title}</h3>
+                <div className="location">
+                  <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  <span>{destination.location}</span>
                 </div>
-                <button className="filter-toggle" onClick={() => setShowFilters(true)}>
-                  <FontAwesomeIcon icon={faFilter} /> Filters
-                </button>
+                <p className="description">{destination.desc}</p>
+                <div className="card-meta">
+                  <div className="meta-item">
+                    {/* <span>${destination.price}</span> */}
+                  </div>
+                  <div className="meta-item">
+                    {/* <span>{destination.duration} Days</span> */}
+                  </div>
+                  <div className="meta-item">
+                    <FontAwesomeIcon icon={faStar} />
+                    <span>{destination.rating}</span>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            {filteredDestinations.length > 0 ? (
-              <div className="destinations-grid">
-                {filteredDestinations.map(destination => (
-                  <div 
-                    className="destination-card"
-                    key={destination.id}
-                    ref={el => cardsRef.current[destination.id] = el}
-                    style={{ 
-                      opacity: 0,
-                      transform: 'translateY(50px)',
-                      transition: 'opacity 0.5s ease, transform 0.5s ease'
-                    }}
-                  >
-                    <div className="card-image">
-                      <img src={destination.img} alt={destination.title} loading="lazy" />
-                      <div className="card-overlay">
-                        {/* <button className="quick-view">View Details</button> */}
-                      </div>
-                      {destination.theme && <div className="theme-badge">{destination.theme}</div>}
-                      <button 
-                        className={`favorite-btn ${favorites.includes(destination.id) ? 'active' : ''}`}
-                        onClick={() => toggleFavorite(destination.id)}
-                      >
-                        <FontAwesomeIcon icon={faHeart} />
-                      </button>
-                    </div>
-                    <div className="card-content">
-                      <h3>{destination.title}</h3>
-                      <div className="location">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} />
-                        <span>{destination.location}</span>
-                      </div>
-                      <p className="description">{destination.desc}</p>
-                      <div className="card-meta">
-                        <div className="meta-item">
-                          {/* <FontAwesomeIcon icon={faDollarSign} /> */}
-                          {/* <span>From ${destination.price}</span> */}
-                        </div>
-                        <div className="meta-item">
-                          {/* <FontAwesomeIcon icon={faCalendarAlt} /> */}
-                          <span>{destination.title} </span>
-                        </div>
-                        <div className="meta-item">
-                          <FontAwesomeIcon icon={faStar} />
-                          <span>{destination.rating}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="no-results">
-                <FontAwesomeIcon icon={faGlobe} className="globe-icon" />
-                <h3>No destinations match your search criteria</h3>
-                <p>Try adjusting your filters or search term</p>
-                <button onClick={() => {
-                  setSearchTerm('');
-                  resetFilters();
-                }}>
-                  Reset Filters
-                </button>
-              </div>
-            )}
-          </main>
+          ))}
         </div>
       </section>
     </div>
