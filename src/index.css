@@ -749,7 +749,7 @@
 
 /* Testimonials */
 .testimonials {
-  padding: 80px 20px;
+  padding: 70px 15px;
   background: linear-gradient(rgba(12, 74, 110, 0.05), #f8f9fa);
   max-width: 1800px;
   margin: 0 auto;
@@ -758,7 +758,7 @@
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   max-width: 1600px;
   margin: 0 auto;

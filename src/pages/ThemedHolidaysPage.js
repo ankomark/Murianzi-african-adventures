@@ -361,7 +361,7 @@ const ThemedHolidaysPage = () => {
             <div className="th-testimonial-card">
               <div className="th-testimonial-content">
                 <div className="th-quote-icon">"</div>
-                <p className="th-testimonial-text">"Our honeymoon in Santorini was beyond perfect. The private sunset dinner arranged by Bonfire was the most romantic experience of our lives."</p>
+                <p className="th-testimonial-text">"Our honeymoon in Santorini was beyond perfect. The private sunset dinner arranged by Murianzi was the most romantic experience of our lives."</p>
                 <div className="th-author">
                   <div className="th-author-info">
                     <h4 className="th-author-name">Sarah & Michael</h4>
