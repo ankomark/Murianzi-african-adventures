@@ -31,11 +31,11 @@ const About = () => {
               <p>Happy Travelers</p>
             </div>
             <div className="stat-item">
-              <h3>85+</h3>
+              <h3>45+</h3>
               <p>Countries Covered</p>
             </div>
             <div className="stat-item">
-              <h3>98%</h3>
+              <h3>80%</h3>
               <p>Positive Reviews</p>
             </div>
           </div>
@@ -72,7 +72,7 @@ const About = () => {
             <img src={judith} alt='anko mark' />
             <h3>Elizabeth Omollo</h3>
             <p> CEO & Co-Founder </p> <hr/>
-            <p> With over  2 decades of experiencein tourism and deep love for East African region, Culture,and nature, Elizabeth brings a vision of sustainable and personalized travel to every tour. Before starting Murianzi African Adventures, she worked as an Operations Manager for over a decade, exploring several destinations in East Africa, Middle East and Asia.</p><hr/>
+            <p> With over  2 decades of experience in tourism and deep love for East African region, Culture,and nature, Elizabeth brings a vision of sustainable and personalized travel to every tour. Before starting Murianzi African Adventures, she worked as an Operations Manager for over a decade, exploring several destinations in East Africa, Middle East and Asia.</p><hr/>
             <p>“Travel should not just be about seeing a place — it should be about feeling connected to it.”</p>
           </div>
           <div className="team-member">
