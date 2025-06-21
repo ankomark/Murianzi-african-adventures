@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaWhatsapp } from 'react-icons/fa';
 import { faMapMarkerAlt, faPhoneAlt,  faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6'; // FaXTwitter is for "X"
 
 const Contact = () => {
   const formRef = useRef();
@@ -36,7 +37,7 @@ const Contact = () => {
   const handleSocialClick = (platform) => {
     const urls = {
       facebook: 'https://facebook.com/yourpage',
-      instagram: 'https://instagram.com/yourprofile',
+      instagram: 'https://www.instagram.com/murianziafricanadventures?igsh=eTlhbDF2YTBmc3U2',
       twitter: 'https://twitter.com/yourhandle',
       linkedin: 'https://linkedin.com/in/yourprofile'
     };
@@ -79,19 +80,26 @@ const Contact = () => {
           </div>
 
           <div className="social-links">
-            <button onClick={() => handleSocialClick('facebook')} className="social-button">
-              <span className="social-icon">Facebook</span>
-            </button>
-            <button onClick={() => handleSocialClick('instagram')} className="social-button">
-              <span className="social-icon">Instagram</span>
-            </button>
-            <button onClick={() => handleSocialClick('twitter')} className="social-button">
-              <span className="social-icon">Twitter</span>
-            </button>
-            <button onClick={() => handleSocialClick('linkedin')} className="social-button">
-              <span className="social-icon">LinkedIn</span>
-            </button>
-          </div>
+          <button onClick={() => handleSocialClick('facebook')} className="social-button">
+            <FaFacebookF className="social-icon" color='rgb(8, 4, 248)' size={20} />
+            {/* <span></span> */}
+          </button>
+
+          <button onClick={() => handleSocialClick('instagram')} className="social-button">
+            <FaInstagram className="social-icon" color='rgb(240, 134, 13)' size={20} />
+            {/* <span></span> */}
+          </button>
+
+          <button onClick={() => handleSocialClick('twitter')} className="social-button">
+            <FaXTwitter className="social-icon" color='rgb(36, 33, 33)' size={20}/>
+            {/* <span></span> */}
+          </button>
+
+          <button onClick={() => handleSocialClick('FaYoutube')} className="social-button">
+            <FaYoutube className="social-icon" color='rgb(247, 4, 4)' size={20}/>
+            {/* <span></span> */}
+          </button>
+        </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>

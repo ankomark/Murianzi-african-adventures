@@ -127,7 +127,7 @@ const destinationCategories = [
         theme: "Luxury Escape"
       },
       {
-        title: "Rwenzori Mountains",
+        title: "Ruwenzori Mountains",
         location: "Uganda",
         desc: "Also known as the 'Mountains of the Moon', home to glaciers",
         img: "https://images.pexels.com/photos/15250189/pexels-photo-15250189/free-photo-of-although-yoho-is-huge-in-winter-i-feel-like-it-s-a-hidden-gem.jpeg?auto=compress&cs=tinysrgb&w=600",
