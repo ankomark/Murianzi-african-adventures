@@ -2521,17 +2521,42 @@ select {
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
-  animation: scroll-left 25s linear infinite;
-  font-size: 1.2rem;
-  color: white; /* Or match your design */
-  padding: 10px 0;
+  animation: scroll-left 20s linear infinite;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 12px 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif; /* Or your preferred elegant font */
+  position: relative;
+}
+
+.scroll-text::before,
+.scroll-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scroll-text::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(93, 177, 202, 0.5) 0%, transparent 100%);
+}
+
+.scroll-text::after {
+  right: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(132, 188, 214, 0.5) 100%);
 }
 
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
   }
-
   100% {
     transform: translateX(-100%);
   }
