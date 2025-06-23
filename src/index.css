@@ -2309,8 +2309,7 @@ select {
 .about-hero {
   position: relative;
   height: 70vh;
-  background: 
-              url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background: url('https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -2319,19 +2318,70 @@ select {
   text-align: center;
   color: white;
   margin-bottom: 4rem;
+  overflow: hidden; /* Add this to contain scrolling text */
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .hero-overlay h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
-.hero-overlay p {
-  font-size: 1.5rem;
+/* Scrolling Text Styles */
+.scroll-text-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%; /* Creates space for smooth looping */
+  animation: scroll-left 25s linear infinite;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px 0;
   font-weight: 300;
-  text-shadow: 1px 1px 2px rgba(163, 145, 145, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Add smooth edge fading */
+.scroll-text-container::before,
+.scroll-text-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-text-container::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.scroll-text-container::after {
+  right: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Mission Section */
@@ -2450,7 +2500,7 @@ select {
   font-size: 1rem;
 }
 
-/* Updated Team Section */
+/* Team Section */
 .team-section {
   padding: 4rem 0;
   background-color: #f9f9f9;
@@ -2512,81 +2562,9 @@ select {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
 }
-.abt{
+
+.abt {
   color: aliceblue;
-}
-
-.scroll-text {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  box-sizing: border-box;
-  animation: scroll-left 20s linear infinite;
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
-  padding: 12px 0;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif; /* Or your preferred elegant font */
-  position: relative;
-}
-
-.scroll-text::before,
-.scroll-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100px;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.scroll-text::before {
-  left: 0;
-  background: linear-gradient(90deg, rgba(93, 177, 202, 0.5) 0%, transparent 100%);
-}
-
-.scroll-text::after {
-  right: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(132, 188, 214, 0.5) 100%);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .team-member {
-    max-width: 200px;
-  }
-  
-  .team-member img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-  }
-  
-  .team-member {
-    max-width: 100%;
-  }
 }
 
 /* CTA Section */
@@ -2621,22 +2599,66 @@ select {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Adjustments */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+  .about-hero {
+    height: 60vh;
+  }
+
   .hero-overlay h1 {
     font-size: 2.5rem;
   }
-  
-  .hero-overlay p {
-    font-size: 1.2rem;
+
+  .scroll-text {
+    font-size: 1rem;
+    animation-duration: 20s; /* Faster on mobile for better visibility */
+    padding: 8px 0;
   }
-  
+
+  .scroll-text-container::before,
+  .scroll-text-container::after {
+    width: 30px; /* Narrower fade on mobile */
+  }
+
   .mission-stats {
     flex-direction: column;
   }
-  
+
   .stat-item {
     margin-bottom: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-member {
+    max-width: 200px;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .scroll-text {
+    animation-duration: 15s; /* Even faster on very small screens */
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .team-member {
+    max-width: 100%;
   }
 }
 

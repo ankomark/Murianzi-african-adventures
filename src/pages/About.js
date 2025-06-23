@@ -12,7 +12,9 @@ const About = () => {
       <section className="about-hero">
         <div className="hero-overlay">
           <h1>Our Story of Adventure</h1>
-          <p className="scroll-text">From The Shoes Of Lake Victoria To Savannah Trails - Adventure Awaits</p>
+          <p className="scroll-text">
+  <span>From The Shoes Of Lake Victoria To Savannah Trails - Adventure Awaits </span>
+</p>
         </div>
       </section>
 
