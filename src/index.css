@@ -2515,6 +2515,27 @@ select {
 .abt{
   color: aliceblue;
 }
+
+.scroll-text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  animation: scroll-left 25s linear infinite;
+  font-size: 1.2rem;
+  color: white; /* Or match your design */
+  padding: 10px 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .team-grid {
