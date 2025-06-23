@@ -2347,7 +2347,7 @@ select {
   padding-right: 100%; /* Creates space for smooth looping */
   animation: scroll-left 25s linear infinite;
   font-size: 1.2rem;
-  color: rgb(163, 232, 241);
+  color: rgb(255, 255, 255);
   padding: 10px 0;
   font-weight: 300;
   letter-spacing: 1px;
